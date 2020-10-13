@@ -35,7 +35,7 @@ export default function Contact () {
     <main className={classes.content}>
       <Header />
       <Grid container className={classes.grid}>
-        <img src={require('../img/portrait.jpg')} alt='jaya subrahmanyan' width={'100%'}/>
+        <img src={require('../img/portrait.jpg')} alt='jaya subrahmanyan' style={{ objectFit: 'cover', maxHeight: '30vw' }}/>
         <p className={classes.text}>
         Jaya Subrahmanyan is a writer and software engineer. She holds a BA in
         Computer Science and English (with a concentration in creative writing)

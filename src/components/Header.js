@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useTheme, makeStyles } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Link from '@material-ui/core/Link'
-import Paper from '@material-ui/core/Card'
+import Paper from '@material-ui/core/Paper'
 import { useLocation } from 'react-router-dom'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontSize: 27,
     paddingBottom: 20,
+    color: '#50a',
     [(theme.breakpoints.down('sm'))]: {
       fontSize: 20
     }
@@ -21,9 +22,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 18,
     padding: 8
   },
-  avatar: {
-    width: theme.spacing(3),
-    height: theme.spacing(3)
+  logoIcon: {
+    position: 'fixed',
+    top: 50,
+    [(theme.breakpoints.down('sm'))]: {
+      top: 10,
+      left: 10
+    }
   },
   menuIcon: {
     position: 'fixed',
@@ -60,7 +65,7 @@ export default function Header () {
   return (
     <div>
       <div style={{ textAlign: 'center', marginBottom: 20 }}>
-      <Link href={'/'} className={classes.title} color='inherit'>jaya subrahmanyan</Link>
+      <Link href={'/'} className={classes.title}>jaya subrahmanyan</Link>
       </div>
       { mobile ?
         <div>
@@ -82,13 +87,20 @@ export default function Header () {
           </Dialog>
         </div>
       :
+      <div>
         <Paper elevation={0} className={classes.menu}>
+          <IconButton
+            className={classes.logoIcon}
+          >
+            <Link href={'/'}><img src={require('../img/site_logo.png')} height={'40vh'} alt={'site logo'}/></Link>
+          </IconButton>
           <Grid container direction='column' spacing={5}>
             <Grid item><Link href={'/projects'} color={(path.pathname === '/projects') ? 'secondary' : 'inherit'} className={classes.nav}>projects</Link></Grid>
             <Grid item><Link href={'/resume'} color={(path.pathname === '/resume') ? 'secondary' : 'inherit'} className={classes.nav}>resume/cv</Link></Grid>
             <Grid item><Link href={'/contact'} color={(path.pathname === '/contact') ? 'secondary' : 'inherit'} className={classes.nav}>about/contact</Link></Grid>
           </Grid>
         </Paper>
+      </div>
       }
     </div>
   )

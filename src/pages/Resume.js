@@ -2,12 +2,13 @@ import React from 'react'
 import { useTheme, makeStyles } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Avatar from '@material-ui/core/Avatar'
+import AvatarGroup from '@material-ui/lab/AvatarGroup'
 import Grid from '@material-ui/core/Grid'
 import Header from '../components/Header'
 import IconButton from '@material-ui/core/IconButton'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
-import Fab from '@material-ui/core/Fab'
 import GetAppIcon from '@material-ui/icons/GetApp'
+import Fab from '@material-ui/core/Fab'
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -26,6 +27,15 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '60vw'
   },
   avatar: {
+    width: theme.spacing(4),
+    height: theme.spacing(4),
+    margin: 'auto',
+    [(theme.breakpoints.down('sm'))]: {
+      width: theme.spacing(2),
+      height: theme.spacing(2),
+    }
+  },
+  avatar_small: {
     width: theme.spacing(3),
     height: theme.spacing(3),
     margin: 'auto',
@@ -58,10 +68,24 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   extendedIcon: {
-    marginRight: theme.spacing(1),
+    width: theme.spacing(2),
+    height: theme.spacing(2),
+  },
+  additional: {
+    fontSize: 14,
+    [(theme.breakpoints.down('sm'))]: {
+      fontSize: 10,
+    }
+  },
+  button: {
+    marginLeft: 10,
+    [(theme.breakpoints.down('sm'))]: {
+      marginLeft: 0,
+    }
   },
   fab: {
     position: 'fixed',
+    fontSize: 10,
     right: 20,
     bottom: 20
   }
@@ -83,12 +107,28 @@ const Resume = () => {
       className={classes.grid}>
 
     <Grid item container direction='row' alignItems='center'>
+      <Grid item>
       <h6 className={classes.header}>
         Recent Experience
       </h6>
-      <IconButton href='https://www.linkedin.com/in/radhikajaya/'>
+      </Grid>
+      <Grid item>
+      <IconButton className={classes.button} href='https://www.linkedin.com/in/radhikajaya/' target='_blank'>
         <LinkedInIcon />
       </IconButton>
+      </Grid>
+      <Grid item>
+      { mobile ?
+        <Fab variant="extended" size='small' className={classes.fab} href={require('../img/Jaya-CV.pdf')} target='_blank'>
+          <GetAppIcon className={classes.extendedIcon} />
+          <div className={classes.additional}>DOWNLOAD CV</div>
+        </Fab> :
+        <IconButton className={classes.button} href={require('../img/Jaya-CV.pdf')} target='_blank'>
+          <GetAppIcon />
+          <div className={classes.additional}>DOWNLOAD CV</div>
+        </IconButton>
+      }
+      </Grid>
     </Grid>
     <Grid item container direction='row' spacing={2} alignItems='center'>
       <Grid item xs={1}><Avatar alt='Yup' src={require('../img/logos/yup.png')} className={classes.avatar} /></Grid>
@@ -121,7 +161,16 @@ const Resume = () => {
         </p>
       </Grid>
     </Grid>
-
+    <Grid item container direction='row' alignItems='center'>
+      <p className={classes.additional}>
+        <i>Additional experience at:</i>
+      </p>
+      <AvatarGroup style={{ marginLeft: 10 }}>
+        <Avatar alt='Columbia' src={require('../img/logos/columbia-cs.png')} className={classes.avatar_small} />
+        <Avatar alt='Google' src={require('../img/logos/google.jpg')} className={classes.avatar_small} />
+        <Avatar alt='Microsoft' src={require('../img/logos/microsoft.png')} className={classes.avatar_small} />
+      </AvatarGroup>
+    </Grid>
     <Grid item>
       <h6 className={classes.header}>
         Education
@@ -150,8 +199,11 @@ const Resume = () => {
         <p className={classes.title}>
           Universidad de Sevilla (Spring 2019)
         </p>
-        <p className={classes.date}>
+        <p className={classes.date} style={{ marginBottom: 5 }}>
           Spring 2019
+        </p>
+        <p className={classes.subtitle}>
+          Spanish language courses taken in Gender Studies, Psychology, Art, and Literature
         </p>
       </Grid>
     </Grid>
@@ -161,8 +213,11 @@ const Resume = () => {
         <p className={classes.title}>
           University of Washington
         </p>
-        <p className={classes.date}>
+        <p className={classes.date} style={{ marginBottom: 5 }}>
           Sept 2016 - June 2017
+        </p>
+        <p className={classes.subtitle}>
+          CSE Direct Admit, Honors Program
         </p>
       </Grid>
     </Grid>
@@ -202,22 +257,11 @@ const Resume = () => {
           Columbia Bartending Agency
         </p>
         <p className={classes.date}>
-          Cultural & Language Assistant: Feb 2019 - May 2019
+          Distinguished Bartender: Nov 2017 - May 2020
         </p>
       </Grid>
     </Grid>
     </Grid>
-
-    { mobile ?
-      <Fab size='small' className={classes.fab} href={require('../img/Jaya-CV.pdf')} target='_blank'>
-        <GetAppIcon />
-      </Fab> :
-      <Fab variant="extended" size='small' className={classes.fab} href={require('../img/Jaya-CV.pdf')} target='_blank'>
-        <GetAppIcon className={classes.extendedIcon} />
-        Download CV
-      </Fab>
-    }
-
     </main>
   )
 }
