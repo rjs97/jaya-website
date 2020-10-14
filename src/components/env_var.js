@@ -1,17 +1,13 @@
 export default {
   projects: [
   {
-    name: 'Yup.io',
-    img: 'yup.gif',
-    description: `Working as a software engineer at a blockchain startup building a social consensus layer for the internet`,
-    link: 'https://yup.io',
+    name: 'Music Moods & COVID-19',
+    img: 'musicmood.gif',
+    description: `Interactive data visualization exploring the relationship between early COVID-19 pandemic events and music streaming trends`,
+    link: 'https://observablehq.com/@rjs97/music-moods-covid-19/2',
     tech: [
-      { name: 'React.js', type: 'js' },
-      { name: 'Vue.js', type: 'js' },
-      { name: 'Node.js', type: 'js' },
-      { name: 'Twitter API', type: 'api', img: 'twitter.png' },
-      { name:  'MongoDB', type: 'db'},
-      { name: 'C++', type: 'other' }
+      { name: 'D3.js', type: 'js' },
+      { name: 'Spotify API', type: 'api', img: 'spotify.png' },
     ]
   },
   {
@@ -31,7 +27,7 @@ export default {
   },
   {
     name: 'Artist Portfolio',
-    img: 'ciara.png',
+    img: 'ciara.gif',
     description: `Portfolio website exhibiting the artist's paintings and past experience (designed, coded, and hosted by me)`,
     link: 'https://www.ciarapost.com',
     code: 'https://github.com/rjs97/ciara-portfolio',
@@ -42,13 +38,17 @@ export default {
     ]
   },
   {
-    name: 'Music Moods & COVID-19',
-    img: 'musicmood.gif',
-    description: `Interactive data visualization exploring the relationship between early COVID-19 pandemic events and music streaming trends`,
-    link: 'https://observablehq.com/@rjs97/music-moods-covid-19/2',
+    name: 'Yup.io',
+    img: 'yup.gif',
+    description: `Working as a software engineer at a blockchain startup building a social consensus layer for the internet`,
+    link: 'https://yup.io',
     tech: [
-      { name: 'D3.js', type: 'js' },
-      { name: 'Spotify API', type: 'api', img: 'spotify.png' },
+      { name: 'React.js', type: 'js' },
+      { name: 'Vue.js', type: 'js' },
+      { name: 'Node.js', type: 'js' },
+      { name: 'Twitter API', type: 'api', img: 'twitter.png' },
+      { name:  'MongoDB', type: 'db'},
+      { name: 'C++', type: 'other' }
     ]
   },
   {

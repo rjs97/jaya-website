@@ -37,9 +37,11 @@ export default function Contact () {
       <Grid container className={classes.grid}>
         <img src={require('../img/portrait.jpg')} alt='jaya subrahmanyan' style={{ objectFit: 'cover', maxHeight: '30vw' }}/>
         <p className={classes.text}>
-        Jaya Subrahmanyan is a writer and software engineer. She holds a BA in
+        Jaya (Radhika) Subrahmanyan is a writer and software engineer. She holds a BA in
         Computer Science and English (with a concentration in creative writing)
-        from Barnard College, Columbia University. She currently resides in Portland, OR.
+        from Barnard College, Columbia University. She currently currently working
+        as a software engineer for Yup.io. In her free time she enjoys reading,
+        bouldering, playing guitar, & searching for the perfect coffee shop.
         </p>
         <p className={classes.contact}>
         To get in touch, email her at <i>radhika.jaya4 - [at] - gmail - [dot] - com </i>

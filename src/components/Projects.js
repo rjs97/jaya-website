@@ -84,7 +84,7 @@ export default function Projects () {
           />
           </Link>
           <CardContent>
-            <h5>{project.name}</h5>
+            <Link href={project.link} color='inherit' className={classes.nav}><h5>{project.name}</h5></Link>
             <p className={classes.description}>
               {project.description}
             </p>
