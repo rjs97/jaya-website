@@ -41,7 +41,7 @@ export default function Contact () {
         Computer Science and English (with a concentration in creative writing)
         from Barnard College, Columbia University. She currently currently working
         as a software engineer for Yup.io. In her free time she enjoys reading,
-        bouldering, playing guitar, & searching for the perfect coffee shop.
+        bouldering & playing guitar.
         </p>
         <p className={classes.contact}>
         To get in touch, email her at <i>radhika.jaya4 - [at] - gmail - [dot] - com </i>

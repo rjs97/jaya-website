@@ -1,6 +1,5 @@
 import React from 'react'
-import { useTheme, makeStyles } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import { makeStyles } from '@material-ui/core/styles'
 import Avatar from '@material-ui/core/Avatar'
 import AvatarGroup from '@material-ui/lab/AvatarGroup'
 import Grid from '@material-ui/core/Grid'
@@ -70,6 +69,7 @@ const useStyles = makeStyles((theme) => ({
   extendedIcon: {
     width: theme.spacing(2),
     height: theme.spacing(2),
+    marginRight: 5
   },
   additional: {
     fontSize: 14,
@@ -93,8 +93,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Resume = () => {
   const classes = useStyles()
-  const theme = useTheme()
-  const mobile = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
     <main className={classes.content}>
@@ -118,16 +116,10 @@ const Resume = () => {
       </IconButton>
       </Grid>
       <Grid item>
-      { mobile ?
         <Fab variant="extended" size='small' className={classes.fab} href={require('../img/Jaya-CV.pdf')} target='_blank'>
           <GetAppIcon className={classes.extendedIcon} />
           <div className={classes.additional}>DOWNLOAD CV</div>
-        </Fab> :
-        <IconButton className={classes.button} href={require('../img/Jaya-CV.pdf')} target='_blank'>
-          <GetAppIcon />
-          <div className={classes.additional}>DOWNLOAD CV</div>
-        </IconButton>
-      }
+        </Fab>
       </Grid>
     </Grid>
     <Grid item container direction='row' spacing={2} alignItems='center'>

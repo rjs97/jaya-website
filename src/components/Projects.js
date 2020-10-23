@@ -23,8 +23,16 @@ const useStyles = makeStyles((theme) => ({
       maxWidth: '100vw'
     }
   },
+  name: {
+    fontSize: 22,
+    fontWeight: 'bold',
+  },
   description: {
     fontSize: 14
+  },
+  date: {
+    marginTop: 5,
+    fontSize: 12
   },
   chips: {
     display: 'flex',
@@ -84,7 +92,10 @@ export default function Projects () {
           />
           </Link>
           <CardContent>
-            <Link href={project.link} color='inherit' className={classes.nav}><h5>{project.name}</h5></Link>
+            <Link href={project.link} color='inherit' className={classes.name}>{project.name}</Link>
+            <p className={classes.date}>
+              {project.date}
+            </p>
             <p className={classes.description}>
               {project.description}
             </p>

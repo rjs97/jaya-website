@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from '@material-ui/core/Link'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import Projects from '../components/Projects'
+import IconButton from '@material-ui/core/IconButton'
+import MenuIcon from '@material-ui/icons/Menu'
+import Dialog from '@material-ui/core/Dialog'
+import Paper from '@material-ui/core/Paper'
 
 const useStyles = makeStyles((theme) => ({
   content: {
@@ -17,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 22,
     color: '#50a',
   },
-  nav: {
+  homeNav: {
     fontSize: 15,
   },
   hidden: {
@@ -26,21 +30,60 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     left: 0,
     bottom: 0
+  },
+  nav: {
+    fontSize: 18,
+    padding: 8
+  },
+  menuIcon: {
+    position: 'fixed',
+    top: 20,
+    left: 20,
+    [(theme.breakpoints.down('sm'))]: {
+      top: 10,
+      left: 10
+    }
+  },
+  dialog: {
+    margin: 20,
   }
 }))
 
 const Home = () => {
   const classes = useStyles()
+  const [open, setOpen] = useState(false)
+
+  const handleOpen = () => {
+    setOpen(!open)
+  }
 
   return (
     <main className={classes.content}>
+    <div>
+      <IconButton
+        onClick={handleOpen}
+        className={classes.menuIcon}
+        edge='start'
+      >
+        <MenuIcon />
+      </IconButton>
+      <Dialog onClose={handleOpen} open={open}>
+      <Paper elevation={0} className={classes.dialog}>
+        <Grid container direction='column' spacing={5} alignItems='center'>
+          <Grid item><Link href={'/projects'} color='inherit' className={classes.nav}>projects</Link></Grid>
+          <Grid item><Link href={'/resume'} color='inherit' className={classes.nav}>resume/cv</Link></Grid>
+          <Grid item><Link href={'/contact'} color='inherit' className={classes.nav}>about/contact</Link></Grid>
+        </Grid>
+      </Paper>
+      </Dialog>
+    </div>
     <Grid container direction='column' className={classes.container} spacing={3}>
     <Grid item container direction='row' spacing={3} justify='center'>
       <Grid item>
-        <Link href={'/resume'} color='inherit' className={classes.nav}>resume/cv</Link>
+        <Link href={'/resume'} color='inherit' className={classes.homeNav}>resume/cv</Link>
       </Grid>
       <Grid item>
-        <Link href={'/contact'} color='inherit' className={classes.nav}>about/contact</Link>
+        <Link href={'/contact'} color='inherit' className={classes.homeNav}>about/contact</Link>
       </Grid>
     </Grid>
     <Grid item>
