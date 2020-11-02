@@ -1,6 +1,22 @@
 export default {
   projects: [
   {
+    name: 'Cotton Eyed Joe',
+    img: 'cej.gif',
+    date: '(work in progress)',
+    description: `Web app and Chrome extension to collect and display data about musical artists' influence and collaboration`,
+    link: 'https://cotton-eyed-joe.web.app/',
+    code: 'https://github.com/rjs97/musicmap',
+    tech: [
+      { name: 'D3.js', type: 'js' },
+      { name: 'React.js', type: 'js' },
+      { name: 'Node.js', type: 'js' },
+      { name: 'Spotify API', type: 'api', img: 'spotify.png' },
+      { name:  'MongoDB', type: 'db'},
+      { name:  'Google Firebase', type: 'cloud' },
+    ]
+  },
+  {
     name: 'Artist Portfolio',
     img: 'ciara.gif',
     date: 'August 2020',
@@ -25,26 +41,11 @@ export default {
     ]
   },
   {
-    name: 'Cotton Eyed Joe',
-    img: 'cej.gif',
-    date: '(work in progress)',
-    description: `Web app and Chrome extension to collect and display data about musical artists' influence and collaboration`,
-    link: '#',
-    code: 'https://github.com/rjs97/musicmap',
-    tech: [
-      { name: 'D3.js', type: 'js' },
-      { name: 'React.js', type: 'js' },
-      { name: 'Node.js', type: 'js' },
-      { name: 'Spotify API', type: 'api', img: 'spotify.png' },
-      { name:  'MongoDB', type: 'db'},
-      { name:  'Google Firebase', type: 'cloud' },
-    ]
-  },
-  {
     name: 'Yup.io',
     img: 'yup.gif',
     date: 'January 2020 - present',
-    description: `Cryptocurrency startup building a social consensus layer for the internet (working as a full stack software engineer)`,
+    description: `Cryptocurrency startup building a social consensus layer for the internet (working as a full stack software engineer).
+      Demo above is for a Twitter OAuth feature that I built and tested for production use.`,
     link: 'https://yup.io',
     tech: [
       { name: 'React.js', type: 'js' },
