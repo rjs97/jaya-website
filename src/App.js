@@ -18,7 +18,7 @@ function App() {
         </Switch>
       </header>
     </div>
-  );
+  )
 }
 
 export default App

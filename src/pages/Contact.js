@@ -39,9 +39,8 @@ export default function Contact () {
         <p className={classes.text}>
         Jaya (Radhika) Subrahmanyan is a writer and software engineer. She holds a BA in
         Computer Science and English (with a concentration in creative writing)
-        from Barnard College, Columbia University. She currently currently working
-        as a software engineer for Yup.io. In her free time she enjoys reading,
-        bouldering & playing guitar.
+        from Barnard College, Columbia University. She currently works as a Product Developer
+        at ProPublica. In her free time, she enjoys reading, writing, bouldering, and playing guitar.
         </p>
         <p className={classes.contact}>
         To get in touch, email her at <i>radhika.jaya4 - [at] - gmail - [dot] - com </i>

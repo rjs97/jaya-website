@@ -1,6 +1,21 @@
 export default {
   projects: [
   {
+    name: 'wbar.org',
+    img: 'wbar.png',
+    date: 'March 2020',
+    description: `Complete redesign of the WBAR (Barnard College Radio) website, complete with streaming, archiving, & DJ accounts`,
+    link: 'https://wbar.org/',
+    code: 'https://github.com/rjs97/wbar',
+    tech: [
+      { name: 'React', type: 'js' },
+      { name: 'Node', type: 'js' },
+      { name:  'MongoDB', type: 'db'},
+      { name:  'DreamHost', type: 'cloud' },
+      { name:  'Icecast', type: 'other' },
+    ]
+  },
+  {
     name: 'Cotton Eyed Joe',
     img: 'cej.gif',
     date: '(work in progress)',
@@ -8,9 +23,9 @@ export default {
     link: 'https://cotton-eyed-joe.web.app/',
     code: 'https://github.com/rjs97/musicmap',
     tech: [
-      { name: 'D3.js', type: 'js' },
-      { name: 'React.js', type: 'js' },
-      { name: 'Node.js', type: 'js' },
+      { name: 'D3', type: 'js' },
+      { name: 'React', type: 'js' },
+      { name: 'Node', type: 'js' },
       { name: 'Spotify API', type: 'api', img: 'spotify.png' },
       { name:  'MongoDB', type: 'db'},
       { name:  'Google Firebase', type: 'cloud' },
@@ -24,8 +39,8 @@ export default {
     link: 'https://www.ciarapost.com',
     code: 'https://github.com/rjs97/ciara-portfolio',
     tech: [
-      { name: 'React.js', type: 'js' },
-      { name: 'Node.js', type: 'js' },
+      { name: 'React', type: 'js' },
+      { name: 'Node', type: 'js' },
       { name:  'Google Firebase', type: 'cloud' },
     ]
   },
@@ -33,24 +48,24 @@ export default {
     name: 'Music Moods & COVID-19',
     img: 'musicmood.gif',
     date: 'May 2020',
-    description: `Interactive data visualization exploring the relationship between early COVID-19 pandemic events and music streaming trends`,
+    description: `Interactive data visualization exploring the relationship between early COVID-19 pandemic events and music streaming trends in the United States`,
     link: 'https://observablehq.com/@rjs97/music-moods-covid-19/2',
     tech: [
-      { name: 'D3.js', type: 'js' },
+      { name: 'D3', type: 'js' },
       { name: 'Spotify API', type: 'api', img: 'spotify.png' },
     ]
   },
   {
     name: 'Yup.io',
     img: 'yup.gif',
-    date: 'January 2020 - present',
-    description: `Cryptocurrency startup building a social consensus layer for the internet (working as a full stack software engineer).
-      Demo above is for a Twitter OAuth feature that I built and tested for production use.`,
+    date: 'January 2020 - December 2020',
+    description: `Cryptocurrency startup building a social consensus layer for the internet -
+      demo above is for a Twitter OAuth feature built and tested for production use`,
     link: 'https://yup.io',
     tech: [
-      { name: 'React.js', type: 'js' },
-      { name: 'Vue.js', type: 'js' },
-      { name: 'Node.js', type: 'js' },
+      { name: 'React', type: 'js' },
+      { name: 'Vue', type: 'js' },
+      { name: 'Node', type: 'js' },
       { name: 'Twitter API', type: 'api', img: 'twitter.png' },
       { name:  'MongoDB', type: 'db'},
       { name: 'C++', type: 'other' }
@@ -64,9 +79,9 @@ export default {
     link: 'https://github.com/rjs97/ListPlay',
     code: 'https://github.com/rjs97/ListPlay',
     tech: [
-      { name: 'Bootstrap', type: 'js' },
       { name: 'jQuery', type: 'js' },
-      { name: 'Node.js', type: 'js' },
+      { name: 'Handlebars', type: 'js' },
+      { name: 'Node', type: 'js' },
       { name: 'Spotify API', type: 'api', img: 'spotify.png' },
       { name:  'Digital Ocean', type: 'cloud' },
     ]
@@ -79,7 +94,7 @@ export default {
     code: 'https://github.com/rjs97/memetown',
     description: `First ever web app! Recreation of columbia buy/sell memes in a website marketplace`,
     tech: [
-      { name: 'Bootstrap', type: 'js' },
+      { name: 'jQuery', type: 'js' },
       { name: 'Flask', type: 'other' },
     ]
   }]

@@ -116,10 +116,21 @@ const Resume = () => {
       </IconButton>
       </Grid>
       <Grid item>
-        <Fab variant="extended" size='small' className={classes.fab} href={require('../img/Jaya-CV.pdf')} target='_blank'>
+        <Fab variant="extended" size='small' className={classes.fab} href={require('../img/Jaya-Updated-CV.pdf')} target='_blank'>
           <GetAppIcon className={classes.extendedIcon} />
           <div className={classes.additional}>DOWNLOAD CV</div>
         </Fab>
+      </Grid>
+    </Grid>
+    <Grid item container direction='row' spacing={2} alignItems='center'>
+      <Grid item xs={1}><Avatar alt='ProPublica' src={require('../img/logos/propublica.png')} className={classes.avatar} /></Grid>
+      <Grid item xs={11}>
+        <p className={classes.title}>
+          <b>Product Developer</b>, ProPublica, <i>Remote</i>
+        </p>
+        <p className={classes.date}>
+          Jan 2021 - present
+        </p>
       </Grid>
     </Grid>
     <Grid item container direction='row' spacing={2} alignItems='center'>
@@ -129,7 +140,7 @@ const Resume = () => {
           <b>Full Stack Software Engineer</b>, Yup.io, <i>New York, NY</i>
         </p>
         <p className={classes.date}>
-          Jan 2020 - present
+          Jan 2020 - Dec 2020
         </p>
         <p className={classes.subtitle}>
           Blockchain startup building a social consensus layer for the internet
@@ -172,7 +183,7 @@ const Resume = () => {
       <Grid item xs={1}><Avatar alt='Barnard' src={require('../img/logos/barnard.jpg')} className={classes.avatar} /></Grid>
       <Grid item xs={11}>
         <p className={classes.title}>
-          Barnard College, Columbia University (2017-2020)
+          Barnard College, Columbia University
         </p>
         <p className={classes.date} style={{ marginBottom: 5 }}>
           Sept 2017 - May 2020
@@ -189,7 +200,7 @@ const Resume = () => {
       <Grid item xs={1}><Avatar alt='US' src={require('../img/logos/us.png')} className={classes.avatar} /></Grid>
       <Grid item xs={11}>
         <p className={classes.title}>
-          Universidad de Sevilla (Spring 2019)
+          Universidad de Sevilla
         </p>
         <p className={classes.date} style={{ marginBottom: 5 }}>
           Spring 2019
