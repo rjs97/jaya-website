@@ -189,7 +189,8 @@ const Resume = () => {
           Sept 2017 - May 2020
         </p>
         <p className={classes.subtitle}>
-          B.A. in Computer Science & English (Creative Writing concentration)
+          B.A. in English (Creative Writing concentration) <br/>
+          B.A. in Computer Science (Departmental Honors)
         </p>
         <p className={classes.subtitle}>
           <i>cum laude</i>

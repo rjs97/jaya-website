@@ -4,7 +4,7 @@ export default {
     name: 'wbar.org',
     img: 'wbar.png',
     date: 'March 2020',
-    description: `Complete redesign of the WBAR (Barnard College Radio) website, complete with streaming, archiving, & DJ accounts`,
+    description: `Redesign of the WBAR (Barnard College Radio) website, complete with streaming, archiving, & DJ accounts`,
     link: 'https://wbar.org/',
     code: 'https://github.com/rjs97/wbar',
     tech: [

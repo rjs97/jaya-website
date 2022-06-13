@@ -1,0 +1,15 @@
+FROM node:14
+
+# Create app directory
+WORKDIR /app
+
+# Install app dependencies
+# Ensure both package.json AND yarn.lock are copied where available (npm@5+)
+COPY package.json yarn.lock .
+
+RUN yarn install
+
+# Bundle app source
+COPY . .
+
+CMD [ "yarn", "start" ]
