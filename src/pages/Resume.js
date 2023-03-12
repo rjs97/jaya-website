@@ -131,6 +131,10 @@ const Resume = () => {
         <p className={classes.date}>
           Jan 2021 - present
         </p>
+        <p className={classes.subtitle}>
+          Part of a small team responsible for the infrastructure and technical processes powering 
+          the website and business operations of an investigative journalism nonprofit.
+        </p>
       </Grid>
     </Grid>
     <Grid item container direction='row' spacing={2} alignItems='center'>
@@ -143,8 +147,8 @@ const Resume = () => {
           Jan 2020 - Dec 2020
         </p>
         <p className={classes.subtitle}>
-          Blockchain startup building a social consensus layer for the internet
-          that rewards users for their opinions
+          Early hire at a blockchain startup building a social consensus layer for the internet
+          that rewards users for their opinions. Helped launch a <a href="https://yupprotocol.org/" target="_blank" rel="noopener noreferrer">token</a> built on Ethereum.
         </p>
       </Grid>
     </Grid>
@@ -160,7 +164,7 @@ const Resume = () => {
         <p className={classes.subtitle}>
           Engineered a project to expand user control of personal data, enabling
           users to export data from Google products to an external location of
-          their choice (i.e. OneDrive, Dropbox, Box)
+          their choice, such as their local device, OneDrive, or Dropbox.
         </p>
       </Grid>
     </Grid>
