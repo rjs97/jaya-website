@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid'
 import Header from '../components/Header'
 import { makeStyles } from '@material-ui/core/styles'
 
+// TODO: figure out how to put this all in a css file
 const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
@@ -37,10 +38,10 @@ export default function Contact () {
       <Grid container className={classes.grid}>
         <img src={require('../img/portrait.jpg')} alt='jaya subrahmanyan' style={{ objectFit: 'cover', maxHeight: '30vw' }}/>
         <p className={classes.text}>
-        Jaya (Radhika) Subrahmanyan is a writer and software engineer. She holds a BA in
-        Computer Science and English (with a concentration in creative writing)
-        from Barnard College, Columbia University. She currently works as a Product Developer
-        at ProPublica. In her free time, she enjoys reading, writing, bouldering, and playing guitar.
+        Jaya (Radhika) Subrahmanyan currently works as a Product Developer at ProPublica. 
+        She holds a BA in Computer Science and English (with a concentration in creative writing)
+        from Barnard College, Columbia University. In her free time, you can find her at the beach, 
+        riding her bike, playing guitar, reading, writing, or bouldering.
         </p>
         <p className={classes.contact}>
         To get in touch, email her at <i>radhika.jaya4 - [at] - gmail - [dot] - com </i>
